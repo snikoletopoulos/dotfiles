@@ -1,0 +1,35 @@
+  [user]
+	email = snikoletopoulos@hotmail.com
+	name = Stavros
+[core]
+	excludesfile = /Users/snikoletopoulos/.gitignore_global
+	editor = nvim
+[commit]
+	template = /Users/snikoletopoulos/.stCommitMsg
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+; Delta
+[core]
+    pager = delta
+  	diff = delta
+  	log = delta
+  	reflog = delta
+  	show = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[init]
+	defaultBranch = main
