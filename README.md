@@ -14,8 +14,7 @@ The structure of this repository typically looks like:
 ```
 dotfiles/
 ├── zsh/
-│   ├── .bashrc
-│   └── .bash_profile
+│   └── .zshrc
 ├── tmux/
 │   └── .config
 │       └── .tmux.conf
