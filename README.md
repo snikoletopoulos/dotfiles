@@ -17,7 +17,8 @@ dotfiles/
 │   ├── .bashrc
 │   └── .bash_profile
 ├── tmux/
-│   └── .tmux.conf
+│   └── .config
+│       └── .tmux.conf
 └── ...
 ```
 
