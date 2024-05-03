@@ -37,7 +37,7 @@ To use these dotfiles on your system:
 
    ```bash
    # Debian/Ubuntu
-   sudo apt-get install stow
+   sudo apt install stow
 
    # Homebrew
    brew install stow
@@ -48,7 +48,11 @@ To use these dotfiles on your system:
    configurations. For example, to deploy the `zsh` configurations:
 
    ```bash
-   cd ~/dotfiles
+   stow */ # Everything (the '/' ignores the README)
+   ```
+
+   ```bash
+
    stow zsh
    ```
 
