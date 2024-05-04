@@ -1,2 +1,2 @@
 alias gce="gh copilot explain"
-alias gcs="gh copilot suggest"
+alias "??"="gh copilot suggest"
