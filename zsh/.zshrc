@@ -9,7 +9,7 @@ FILES_STR=$(find -L $CONFIG -name '*.zsh' -not -name 'init.zsh' -not -name 'alia
 FILES=($(echo $FILES_STR | tr '\n' ' '))
 
 for FILE in $FILES; do
-    source $FILE
+	source $FILE
 done
 
 source $CONFIG/aliases.zsh
