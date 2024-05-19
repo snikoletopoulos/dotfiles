@@ -15,8 +15,3 @@ done
 source $CONFIG/aliases.zsh
 source $CONFIG/tmux-autostart.sh
 
-# Created by `pipx` on 2023-05-03 23:33:06
-export PATH="$PATH:/Users/snikoletopoulos/.local/bin"
-# eval "$(register-python-argcomplete pipx)"
-
-export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
