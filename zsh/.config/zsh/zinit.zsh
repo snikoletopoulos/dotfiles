@@ -40,10 +40,8 @@ zinit snippet "$HOME/.config/zsh/jenv.sh"
 
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-	echo codecomplition compile
 	compinit
 else
-	echo codecomplition not compile
 	compinit -C
 fi
 
