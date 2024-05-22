@@ -1,23 +1,25 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
 gui:
   expandFocusedSidePanel: true
   nerdFontsVersion: "3"
-  border: "rounded" # one of 'single' | 'double' | 'rounded' | 'hidden'
+  border: "rounded"
   scrollPastBottom: false
   authorColors:
     "Stavros": "#f47b20"
-  scrollHeight: 4 # how many lines you scroll by
-  showListFooter: false # for seeing the '5 of 20' message in list panels
+  scrollHeight: 4
+  showListFooter: false
   showCommandLog: false
-  showBottomLine: false # for hiding the bottom information line (unless it has important information to tell you)
+  showBottomLine: false
 
   # testing
   scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
-  scrollOffBehavior: "margin" # one of 'margin' | 'jump'; see 'Scroll-off Margin' section below
-  mainPanelSplitMode: "flexible" # one of 'horizontal' | 'flexible' | 'vertical'
+  scrollOffBehavior: "margin"
+  mainPanelSplitMode: "flexible"
   commitLength:
     show: true
-  showPanelJumps: false # for showing the jump-to-panel keybindings as panel subtitles
-  portraitMode: "auto" # one of 'auto' | 'never' | 'always'
+  showPanelJumps: false
+  portraitMode: "auto"
 os:
   editPreset: "nvim"
 git:
