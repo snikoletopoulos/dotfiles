@@ -13,5 +13,6 @@ for FILE in $FILES; do
 done
 
 source $CONFIG/aliases.zsh
+source $CONFIG/functions.sh
 source $CONFIG/tmux-autostart.sh
 
