@@ -4,31 +4,19 @@ gui:
   expandFocusedSidePanel: true
   nerdFontsVersion: "3"
   border: "rounded"
-  scrollPastBottom: false
+  scrollPastBottom: true
   authorColors:
     "Stavros": "#f47b20"
   scrollHeight: 4
   showListFooter: false
   showCommandLog: false
   showBottomLine: false
-
-  # testing
-  scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
-  scrollOffBehavior: "margin"
-  mainPanelSplitMode: "flexible"
-  commitLength:
-    show: true
   showPanelJumps: false
-  portraitMode: "auto"
+  scrollOffMargin: 4
 os:
   editPreset: "nvim"
 git:
   log:
-    # TODO
-    # one of date-order, author-date-order, topo-order or default.
-    # topo-order makes it easier to read the git log graph, but commits may not
-    # appear chronologically. See https://git-scm.com/docs/git-log#_commit_ordering
-    order: "topo-order"
     showGraph: "always"
   parseEmoji: true
 confirmOnQuit: true
