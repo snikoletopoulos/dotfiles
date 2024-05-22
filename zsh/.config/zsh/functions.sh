@@ -12,7 +12,7 @@ dotconfig() {
 }
 
 nvimconfig() {
-	cd ~/dotfiles/nvim || return
+	cd ~/.config/nvim || return
 	nv
 	cd - || return
 }
