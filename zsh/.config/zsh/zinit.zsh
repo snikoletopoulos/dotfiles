@@ -33,7 +33,7 @@ zinit ice as"command" from"gh-r" \
 zinit light starship/starship
 
 zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/nvm.sh"
+zinit snippet "$HOME/.config/zsh/fnm.sh"
 
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/jenv.sh"
