@@ -38,6 +38,9 @@ zinit snippet "$HOME/.config/zsh/fnm.sh"
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/jenv.sh"
 
+zinit ice wait lucid
+zinit snippet "$HOME/.config/zsh/rvm.sh"
+
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 	compinit
