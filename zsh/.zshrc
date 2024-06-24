@@ -16,3 +16,4 @@ source $CONFIG/aliases.sh
 source $CONFIG/functions.sh
 source $CONFIG/tmux-autostart.sh
 
+export CHAT_GPT_API_KEY="xxxxxxxx"
