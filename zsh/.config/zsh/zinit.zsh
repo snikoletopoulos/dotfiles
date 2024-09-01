@@ -23,6 +23,9 @@ zinit snippet OMZP::yarn
 zinit ice as"completion"
 zinit snippet OMZP::rust/_rustc
 
+zinit ice
+zinit snippet "$HOME/.config/zsh/delta.sh"
+
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma-continuum/fast-syntax-highlighting
