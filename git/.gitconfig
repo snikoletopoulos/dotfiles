@@ -31,6 +31,7 @@
   	features = mellow-barbet
   	side-by-side = false
     syntax-theme = OneHalfDark
+    tabs = 2
 [diff]
     colorMoved = default
 [merge]

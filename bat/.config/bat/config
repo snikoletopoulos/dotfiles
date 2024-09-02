@@ -6,6 +6,9 @@
 # for a list of all available themes
 --theme="Visual Studio Dark+"
 
+# Make tab size 2 spaces
+--tabs=2
+
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):
 # --italic-text=always
