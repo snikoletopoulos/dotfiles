@@ -35,7 +35,11 @@
 [diff]
     colorMoved = default
 [merge]
-    conflictstyle = diff3
+    tool = nvim
+[mergetool]
+    prompt = false
+[mergetool "nvim"]
+  cmd = nvim -c "DiffviewOpen"
 
 ; Delta themes
 [delta "mellow-barbet"]
