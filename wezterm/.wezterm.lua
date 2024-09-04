@@ -2,11 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- config.color_scheme = "GitHub Dark"
 config.color_scheme = "Catppuccin Mocha"
--- config.window_background_image = "/Users/snikoletopoulos/.config/nvim/extras/terminal-background.gif"
--- config.window_background_opacity = 0.8
--- config.macos_window_background_blur = 20
 
 config.font = wezterm.font("Firacode Nerd Font", { weight = "Medium" })
 config.font_size = 13
