@@ -25,7 +25,6 @@ zinit snippet "$HOME/.config/zsh/delta.sh"
 
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zinit light zdharma-continuum/fast-syntax-highlighting
 
 zinit ice as"command" from"gh-r" \
 	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
@@ -41,11 +40,9 @@ zinit snippet "$HOME/.config/zsh/jenv.sh"
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/rvm.sh"
 
-autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-	compinit
-else
-	compinit -C
-fi
-
-zinit cdreplay -q
+zi for \
+	atinit"zicompinit; zicdreplay" \
+	blockf \
+	lucid \
+	wait \
+	zdharma-continuum/fast-syntax-highlighting
