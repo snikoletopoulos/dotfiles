@@ -28,9 +28,10 @@ config.show_update_window = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_frame = { font_size = 12.0 }
 
-wezterm.on("window-config-reloaded", function(window)
-	window:toast_notification("wezterm", "Configuration reloaded!", nil, 4000)
-end)
+wezterm.on(
+	"window-config-reloaded",
+	function(window) window:toast_notification("wezterm", "Configuration reloaded!", nil, 4000) end
+)
 
 config.keys = {
 	{
@@ -63,6 +64,11 @@ config.keys = {
 		key = "L",
 		mods = "CMD|SHIFT",
 		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "v",
+		mods = "SUPER|CTRL",
+		action = wezterm.action.PasteFrom("Clipboard"),
 	},
 }
 
