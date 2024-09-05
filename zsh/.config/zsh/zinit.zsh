@@ -15,9 +15,6 @@ zinit snippet OMZP::git
 zinit ice as"completion"
 zinit snippet OMZP::pod/_pod
 
-zinit ice as"completion"
-zinit snippet OMZP::ripgrep/_ripgrep
-
 zinit snippet OMZP::yarn
 
 zinit ice as"completion"
