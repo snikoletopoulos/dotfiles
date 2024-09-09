@@ -18,5 +18,6 @@ nvimconfig() {
 }
 
 serveo() {
+	echo "Serving port ${1:-3000}"
 	ssh -R stavros.serveo.net:80:localhost:${1:-3000} serveo.net
 }
