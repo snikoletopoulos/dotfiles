@@ -1,5 +1,11 @@
 CONFIG=$HOME/.config/zsh
 
+if [ -e "$CONFIG/env.sh" ]; then
+	source $CONFIG/env.sh
+else
+	echo "Missing environment file: $CONFIG/env.sh"
+fi
+
 source $CONFIG/init.zsh
 
 FILES_STR=$(find -L $CONFIG -name '*.zsh' -not -name 'init.zsh')
@@ -15,7 +21,6 @@ done
 source $CONFIG/aliases.sh
 source $CONFIG/functions.sh
 
-export CHAT_GPT_API_KEY="xxxxxxxx"
 if [[ -z $TMUX ]]; then
 	start_tmux
 fi
