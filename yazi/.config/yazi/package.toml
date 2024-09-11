@@ -1,5 +1,11 @@
 [plugin]
-deps = [{ use = "Reledia/glow", rev = "4e016fa" }, { use = "dedukun/relative-motions", rev = "73f5542" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "yazi-rs/plugins:git", rev = "9a1129c" }, { use = "imsi32/yatline-githead", rev = "2f2b000" }, { use = "llanosrocas/githead", rev = "bf150f3" }]
+deps = [
+  { use = "Reledia/glow", rev = "4e016fa" },
+  { use = "dedukun/relative-motions", rev = "89d0cb9" },
+  { use = "Lil-Dank/lazygit", rev = "c82794f" },
+  { use = "yazi-rs/plugins:git", rev = "549d766" },
+  { use = "imsi32/yatline-githead", rev = "2f2b000" },
+]
 
 [flavor]
 deps = []
