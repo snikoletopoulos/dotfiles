@@ -39,8 +39,3 @@ start_tmux() {
 
 	unset session_ids create_new_session start_without_tmux choices choice
 }
-
-serveo() {
-	echo "Serving port ${1:-3000}"
-	ssh -R stavros.serveo.net:80:localhost:${1:-3000} serveo.net
-}
