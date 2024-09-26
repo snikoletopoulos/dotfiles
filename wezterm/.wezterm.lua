@@ -65,11 +65,6 @@ config.keys = {
 		mods = "CMD|SHIFT",
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
-	{
-		key = "v",
-		mods = "SUPER|CTRL",
-		action = wezterm.action.PasteFrom("Clipboard"),
-	},
 }
 
 config.mouse_bindings = {
