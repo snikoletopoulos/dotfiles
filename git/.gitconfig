@@ -4,8 +4,6 @@
 [core]
 	excludesfile = /Users/snikoletopoulos/.gitignore_global
 	editor = nvim
-[commit]
-	template = /Users/snikoletopoulos/.stCommitMsg
 [pull]
 	rebase = false
 [filter "lfs"]
