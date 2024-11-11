@@ -3,7 +3,7 @@ deps = [
   { use = "Reledia/glow", rev = "388e847" },
   { use = "dedukun/relative-motions", rev = "1d6d686" },
   { use = "Lil-Dank/lazygit", rev = "c82794f" },
-  { use = "yazi-rs/plugins:git", rev = "4adba4e" },
+  { use = "yazi-rs/plugins:git", rev = "dc11879" },
   { use = "imsi32/yatline-githead", rev = "a6377a8" },
 ]
 
