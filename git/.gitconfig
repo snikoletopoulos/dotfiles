@@ -1,11 +1,12 @@
  [user]
 	email = snikoletopoulos@hotmail.com
-	name = Stavros
+	name = Stavros Nikoletopoulos
 [core]
-	excludesfile = /Users/snikoletopoulos/.gitignore_global
 	editor = nvim
 [pull]
 	rebase = false
+[push]
+    autoSetupRemote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
