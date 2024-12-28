@@ -26,6 +26,9 @@ zinit snippet "$HOME/.config/zsh/delta.sh"
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+
 zinit ice as"command" from"gh-r" \
 	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
 	atpull"%atclone" src"init.zsh"
