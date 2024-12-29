@@ -53,7 +53,7 @@ keybind = cmd+s>8=goto_tab:8
 keybind = cmd+s>9=goto_tab:9
 
 # Split
-keybind = cmd+s>h=new_split:right
+keybind = cmd+s>s=new_split:right
 keybind = cmd+s>v=new_split:down
 
 # Split navigation
