@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 config.color_scheme = "Catppuccin Mocha"
 
 config.font = wezterm.font("Firacode Nerd Font", { weight = "Medium" })
-config.font_size = 13
+config.font_size = 12
 config.line_height = 1.4
 config.term = "wezterm"
 
