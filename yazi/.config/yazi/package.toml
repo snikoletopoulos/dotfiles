@@ -1,9 +1,9 @@
 [plugin]
 deps = [
-  { use = "Reledia/glow", rev = "c2ed51e" },
+  { use = "Reledia/glow", rev = "5ce76dc" },
   { use = "dedukun/relative-motions", rev = "df97039" },
   { use = "Lil-Dank/lazygit", rev = "c82794f" },
-  { use = "yazi-rs/plugins:git", rev = "ec97f88" },
+  { use = "yazi-rs/plugins:git", rev = "71c4fc2" },
   { use = "imsi32/yatline-githead", rev = "a6377a8" },
 ]
 
