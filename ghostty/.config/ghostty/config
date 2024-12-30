@@ -29,6 +29,9 @@ mouse-hide-while-typing = true
 macos-option-as-alt = true
 macos-titlebar-style = "hidden"
 
+# Cursor
+cursor-style-blink = false
+
 # Keybinding
 keybind = cmd+s>shift+r=reload_config
 keybind = cmd+s>x=close_surface
