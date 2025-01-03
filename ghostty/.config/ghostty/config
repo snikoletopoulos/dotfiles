@@ -4,12 +4,13 @@ shell-integration-features = "no-cursor,sudo"
 font-family = "FiraCode Nerd Font Mono Med"
 font-size = 12
 adjust-cell-height = 12
-font-thicken = true
+font-thicken = false
 
 # Theme
 theme = "catppuccin-mocha"
 background-opacity = 0.89
 background-blur-radius = 20
+custom-shader = shaders/bloom025.glsl
 
 # Window
 window-padding-color = "background"
