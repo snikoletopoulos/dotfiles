@@ -6,7 +6,7 @@ gui:
   border: "rounded"
   scrollPastBottom: true
   authorColors:
-    "Stavros": "#f47b20"
+    "Stavros Nikoletopoulos": "#f47b20"
   scrollHeight: 4
   showListFooter: false
   showCommandLog: false
