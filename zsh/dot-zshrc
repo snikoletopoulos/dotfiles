@@ -21,6 +21,10 @@ done
 source $CONFIG/aliases.sh
 source $CONFIG/functions.sh
 
-if [[ -z $TMUX ]] | [[ -z "x${TERM_PROGRAM}" = "xvscode" ]]; then
+if
+	[[ -z $TMUX ]] &&
+		[[ "$TERM_PROGRAM" != "vscode" ]] &&
+		[[ "$TERM_PROGRAM" != "" ]]
+then
 	start_tmux
 fi
