@@ -21,6 +21,6 @@ done
 source $CONFIG/aliases.sh
 source $CONFIG/functions.sh
 
-if [[ -z $TMUX ]]; then
+if [[ -z $TMUX ]] | [[ -z "x${TERM_PROGRAM}" = "xvscode" ]]; then
 	start_tmux
 fi
