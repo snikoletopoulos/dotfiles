@@ -23,6 +23,7 @@ config.window_padding = {
 }
 
 config.inactive_pane_hsb = { brightness = 0.6 }
+config.max_fps = 120
 
 config.use_dead_keys = false
 config.scrollback_lines = 5000
