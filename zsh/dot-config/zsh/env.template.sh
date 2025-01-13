@@ -1,1 +1,2 @@
 export CHAT_GPT_API_KEY=""
+export ANTHROPIC_API_KEY=""
