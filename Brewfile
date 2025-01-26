@@ -41,6 +41,7 @@ brew "zoxide"
 brew "jesseduffield/lazygit/lazygit"
 brew "jorgerojas26/lazysql/lazysql"
 brew "knqyf263/pet/pet"
+brew "fx"
 
 cask "ghostty"
 cask "warp"
