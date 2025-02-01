@@ -9,9 +9,9 @@ font-thicken = false
 # Theme
 theme = "catppuccin-mocha"
 background-opacity = 0.89
-background-blur-radius = 20
-custom-shader = shaders/bloom025.glsl
+background-blur = true
 cursor-text = "#1e1e2e"
+alpha-blending = "linear-corrected"
 
 # Window
 window-padding-color = "background"
