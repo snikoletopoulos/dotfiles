@@ -1,0 +1,8 @@
+theme: catppuccin-mocha
+layout: horizontal
+pager_json: fx
+heading:
+  visible: false
+animation: full
+keymap:
+  toggle-collection: ctrl+b
