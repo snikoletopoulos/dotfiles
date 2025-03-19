@@ -15,8 +15,8 @@ hash = "2b0c33928986f126d5c5a4cac31a6b46"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "cb6165b"
-hash = "ee5fa7e64db72d6b10c2315de97c9cc7"
+rev = "2730199"
+hash = "e0d2c8d7e7afe5b82270367098d1a821"
 
 [[plugin.deps]]
 use = "imsi32/yatline-githead"
