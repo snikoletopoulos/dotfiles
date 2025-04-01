@@ -37,7 +37,7 @@ zinit light starship/starship
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/fnm.sh"
 
-zinit ice atload"zpcdreplay" atclone"./zplug.zsh" atpull"%atclone"
+zinit ice atclone"./zplug.zsh" atpull"%atclone"
 zinit light g-plane/pnpm-shell-completion
 
 zinit ice wait lucid
