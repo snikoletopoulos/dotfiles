@@ -5,8 +5,8 @@ hash = "a6b78bf9af5390e3a85a6951fbb7b93"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
-rev = "8103065"
-hash = "9f13f0740fa3a0c18e47ec6fb62ddfaa"
+rev = "61ae795"
+hash = "65d576a76597aac2a428dc7ec0eda2ce"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
@@ -15,8 +15,8 @@ hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "2730199"
-hash = "e0d2c8d7e7afe5b82270367098d1a821"
+rev = "a1738e8"
+hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [[plugin.deps]]
 use = "imsi32/yatline-githead"
