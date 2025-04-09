@@ -5,6 +5,7 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ":fzf-tab:complete:cd:*" fzf-preview 'eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'
 zstyle ":fzf-tab:complete:nvim:*" fzf-preview '[ -f $realpath ] && bat --color=always --style=numbers $realpath || eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'
+zstyle ':fzf-tab:complete:(cd|nvim|z|kill|ps|systemctl|brew-(install|uninstall|search|info)):*' popup-min-size 100 8
 
 # fzf-tab: kill
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
