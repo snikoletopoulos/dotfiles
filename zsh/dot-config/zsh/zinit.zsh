@@ -8,6 +8,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 zinit ice as"completion"
 zinit snippet OMZP::docker/completions/_docker
