@@ -5,11 +5,13 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 source "${ZINIT_HOME}/zinit.zsh"
 
+zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
 
 zinit ice as"completion"
 zinit snippet OMZP::docker/completions/_docker
 
+zinit ice wait lucid
 zinit snippet OMZP::git
 
 zinit ice as"completion"
@@ -18,10 +20,12 @@ zinit snippet OMZP::pod/_pod
 zinit ice as"completion"
 zinit snippet OMZP::rust/_rustc
 
-zinit ice
+zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/delta.sh"
 
 zinit light zsh-users/zsh-autosuggestions
+
+zinit ice wait lucid
 zinit light zsh-users/zsh-completions
 
 zinit ice depth=1
@@ -46,7 +50,6 @@ zinit snippet "$HOME/.config/zsh/rvm.sh"
 
 zi for \
 	atinit"zicompinit; zicdreplay" \
-	blockf \
 	lucid \
 	wait \
 	zdharma-continuum/fast-syntax-highlighting
