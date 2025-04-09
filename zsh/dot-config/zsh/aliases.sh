@@ -1,5 +1,5 @@
 alias ls="eza --group-directories-first --icons --oneline"
-alias lsl="eza --group-directories-first --icons --long --git"
+alias lsl="eza --group-directories-first --icons --long --no-user --git"
 alias lst="eza --group-directories-first --icons --tree"
 alias nv="nvim"
 
