@@ -50,7 +50,7 @@ zinit snippet "$HOME/.config/zsh/jenv.sh"
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/rvm.sh"
 
-zi for \
+zinit for \
 	atinit"zicompinit; zicdreplay" \
 	lucid \
 	wait \
