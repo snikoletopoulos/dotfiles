@@ -14,9 +14,9 @@ brew autoremove
 log "Updating tmux plugins"
 ./tmux/dot-config/tmux/plugins/tpm/bin/update_plugins all
 
-# Update zinit plugins
+# TODO: Update zinit plugins
 log "Updating zinit plugins"
-zi update
+zinit update
 
 # Update Yazi plugins
 log "Updating Yazi plugins"
