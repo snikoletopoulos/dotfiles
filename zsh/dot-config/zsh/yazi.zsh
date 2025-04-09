@@ -1,6 +1,3 @@
-unalias ya
-unalias yy
-
 yy() {
 	local tmp
 	tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

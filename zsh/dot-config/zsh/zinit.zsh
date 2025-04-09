@@ -15,8 +15,6 @@ zinit snippet OMZP::git
 zinit ice as"completion"
 zinit snippet OMZP::pod/_pod
 
-zinit snippet OMZP::yarn
-
 zinit ice as"completion"
 zinit snippet OMZP::rust/_rustc
 
