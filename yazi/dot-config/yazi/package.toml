@@ -25,8 +25,8 @@ hash = "bfd30c396bbe2af526cb949d97ce3dcf"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
-rev = "90e0284"
-hash = "8d4cb2dfadcbda045ddaa5c274441f9c"
+rev = "2ecf715"
+hash = "38e2ea4703ea606d4eef574e8e8b8fd7"
 
 [flavor]
 deps = []
