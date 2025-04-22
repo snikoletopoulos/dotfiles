@@ -41,6 +41,9 @@ zinit light starship/starship
 zinit ice wait lucid
 zinit snippet "$HOME/.config/zsh/fnm.sh"
 
+zinit ice wait lucid
+zinit snippet "$HOME/.config/zsh/spotify_player.sh"
+
 zinit ice atclone"./zplug.zsh" atpull"%atclone"
 zinit light g-plane/pnpm-shell-completion
 
