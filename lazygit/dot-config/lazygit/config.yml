@@ -11,6 +11,7 @@ gui:
   showListFooter: false
   showCommandLog: false
   showBottomLine: false
+  tabWidth: 2
   showPanelJumps: false
   scrollOffMargin: 4
   mouseEvents: true
