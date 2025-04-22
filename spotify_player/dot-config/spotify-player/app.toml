@@ -38,3 +38,12 @@ playback_window_height = 6
 [layout.library]
 playlist_percent = 40
 album_percent = 40
+
+[device]
+name = "spotify-player"
+device_type = "speaker"
+volume = 100
+bitrate = 320
+audio_cache = false
+normalization = false
+autoplay = true
