@@ -21,6 +21,9 @@ brew bundle
 log "Setting up dotfiles"
 stow */
 
+log "Install tmux plugins"
+~/.config/tmux/plugins/tpm/bin/install_plugins
+
 # Setup yazi
 log "Setting up yazi"
 ya pack -i
