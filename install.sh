@@ -26,7 +26,7 @@ log "Install tmux plugins"
 
 # Setup yazi
 log "Setting up yazi"
-ya pack -i
+ya pkg install
 if [ ! -d "$HOME/.config/yazi/plugins/yatline-catppuccin.yazi" ]; then
 	git clone https://github.com/imsi32/yatline-catppuccin.yazi.git "$HOME/.config/yazi/plugins/yatline-catppuccin.yazi"
 fi

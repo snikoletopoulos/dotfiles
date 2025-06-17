@@ -19,7 +19,7 @@ log "Updating tmux plugins"
 
 # Update Yazi plugins
 log "Updating Yazi plugins"
-ya pack -u
+ya pkg upgrade
 
 # Update npm packages
 log "Updating npm packages"
