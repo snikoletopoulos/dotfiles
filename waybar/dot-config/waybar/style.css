@@ -1,0 +1,99 @@
+@import "mocha.css";
+
+window#waybar {
+	background-color: transparent;
+}
+
+/* test gtk theme */
+/* window#waybar { */
+/*     background: @theme_base_color; */
+/*     border-bottom: 1px solid @unfocused_borders; */
+/*     color: @theme_text_color; */
+/* } */
+
+.modules-left,
+.modules-center,
+.modules-right {
+	background-color: @surface0;
+	border-radius: 18px;
+	color: @text;
+	padding: 0px 12px;
+}
+
+.modules-left {
+	padding: 0px 4px;
+}
+
+.modules-center {
+	padding: 0px 12px;
+}
+
+.modules-center > widget:not(:first-child) > * {
+	margin-left: 12px;
+}
+
+.modules-right > widget:not(:first-child) > * {
+	margin-left: 28px;
+}
+
+.drawer-child > * {
+	margin-left: 18px;
+}
+
+#workspaces button {
+	color: @text;
+}
+
+#workspaces button:hover {
+	color: @blue;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	background-color: inherit;
+	background: transparent;
+	border: transparent 1px solid;
+}
+
+#workspaces button.visible {
+	background-color: @base;
+	color: @mauve;
+	border-radius: 18px;
+	padding: 0 12px;
+	margin: 0 -4px;
+	border: transparent 1px solid;
+}
+
+#custom-music {
+	color: @mauve;
+}
+
+#battery.critical {
+	color: @red;
+}
+
+#battery.critical {
+	color: @peach;
+}
+
+#battery.critical {
+	color: @green;
+}
+
+#battery.charging {
+	color: @yellow;
+}
+
+#bluetooth {
+	color: @blue;
+}
+
+#network {
+	color: @green;
+}
+
+#network.disabled {
+	color: @mauve;
+}
+
+#network.disconnected {
+	color: @red;
+}
