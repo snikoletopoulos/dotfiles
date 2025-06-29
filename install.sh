@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 log() {
 	printf "\n\e[1;34m====> %s <====\e[0m\n\n" "$1"
@@ -20,6 +20,10 @@ brew bundle
 # Setup dotfiles
 log "Setting up dotfiles"
 stow */
+
+# Reload zsh
+log "Reloading zsh"
+source ~/.zshrc
 
 log "Install tmux plugins"
 ~/.config/tmux/plugins/tpm/bin/install_plugins
