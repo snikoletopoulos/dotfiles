@@ -36,6 +36,17 @@ start_tmux() {
 	elif [[ -n "$choice" ]]; then
 		tmux attach-session -t "$choice"
 	fi
+}
 
-	unset session_ids create_new_session start_without_tmux choices choice
+yy() {
+	local tmp
+	tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+
+	local cwd
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd" || return
+	fi
+	rm -f -- "$tmp"
+
 }
