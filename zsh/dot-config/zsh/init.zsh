@@ -2,7 +2,6 @@ setopt nomatch
 
 zle_highlight=('paste:none')
 
-bindkey -v
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history

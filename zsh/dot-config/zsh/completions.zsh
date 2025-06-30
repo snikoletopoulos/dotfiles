@@ -2,6 +2,9 @@
 zstyle ":completion:*" list-colors '${(s.:.)LS_COLORS}'
 zstyle ":completion:*" menu no
 zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+
 zstyle ":fzf-tab:complete:cd:*" fzf-preview 'eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'
 zstyle ":fzf-tab:complete:nvim:*" fzf-preview '[ -f $realpath ] && bat --color=always --style=numbers $realpath || eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza --group-directories-first --color=always --long --no-user --no-time --icons --git $realpath'

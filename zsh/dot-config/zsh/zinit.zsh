@@ -5,56 +5,34 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit ice wait lucid
-zinit light Aloxaf/fzf-tab
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zinit depth"1" nocd light-mode for \
+	mroth/evalcache \
+	has"starship" atinit"_evalcache starship init zsh" zdharma-continuum/null \
+	jeffreytse/zsh-vi-mode
 
-zinit ice as"completion"
-zinit snippet OMZP::docker/completions/_docker
+zinit wait lucid as"completion" depth"1" for \
+	has"docker" OMZP::docker/completions/_docker \
+	has"pod" OMZP::pod/_pod \
+	has"rustc" OMZP::rust/_rustc
 
-zinit ice wait lucid
-zinit snippet OMZP::git
+# TODO
+# zinit depth"1" nocd  for \
+# 	has"delta" atload'eval "$(delta --generate-completion zsh)"' zdharma-continuum/null \
+# 	has"spotify_player" atload'eval "$(spotify_player generate zsh)"' zdharma-continuum/null
 
-zinit ice as"completion"
-zinit snippet OMZP::pod/_pod
+zinit wait lucid depth"1" nocd for \
+	has"fnm" atload"_evalcache fnm env --use-on-cd" zdharma-continuum/null \
+	has'fzf' atload'_evalcache fzf --zsh' zdharma-continuum/null \
+	has"jenv" atload"_evalcache jenv init -" zdharma-continuum/null \
+	has"zoxide" atload"_evalcache zoxide init zsh" zdharma-continuum/null \
+	has"pnpm" atclone"./zplug.zsh" atpull"%atclone" g-plane/pnpm-shell-completion \
+	Aloxaf/fzf-tab \
+	atinit"zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting \
+	atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
+	blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
 
-zinit ice as"completion"
-zinit snippet OMZP::rust/_rustc
-
-zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/delta.sh"
-
-zinit light zsh-users/zsh-autosuggestions
-
-zinit ice wait lucid
-zinit light zsh-users/zsh-completions
-
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
-
-zinit ice as"command" from"gh-r" \
-	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-	atpull"%atclone" src"init.zsh"
-zinit light starship/starship
-
-zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/fnm.sh"
-
-zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/spotify_player.sh"
-
-zinit ice atclone"./zplug.zsh" atpull"%atclone"
-zinit light g-plane/pnpm-shell-completion
-
-zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/jenv.sh"
-
-zinit ice wait lucid
-zinit snippet "$HOME/.config/zsh/rvm.sh"
-
-zinit for \
-	atinit"zicompinit; zicdreplay" \
-	lucid \
-	wait \
-	zdharma-continuum/fast-syntax-highlighting
+# Autostart tmux
+zinit wait lucid depth"1" nocd \
+	if'[[ -z $TMUX ]] && [[ "$TERM_PROGRAM" != "vscode" && "$TERM_PROGRAM" != "" ]]' \
+	atload"start_tmux" \
+	for zdharma-continuum/null
