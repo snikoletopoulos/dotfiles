@@ -50,4 +50,13 @@ yy() {
 	fi
 	rm -f -- "$tmp"
 
+save_prev() {
+	PREV=$(fc -lrn | head -n 1)
+	sh -c "pet new $(printf %q "$PREV")"
+}
+
+run_snippet() {
+	pet exec
+}
+
 }
