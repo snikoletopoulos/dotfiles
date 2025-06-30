@@ -49,6 +49,7 @@ yy() {
 		builtin cd -- "$cwd" || return
 	fi
 	rm -f -- "$tmp"
+}
 
 save_prev() {
 	PREV=$(fc -lrn | head -n 1)
@@ -59,4 +60,8 @@ run_snippet() {
 	pet exec
 }
 
+clear_evalcache() {
+	echo "clearing evalcache"
+	rm "$ZSH_EVALCACHE_DIR"/init-*.sh
+	echo "evalcache cleared"
 }
