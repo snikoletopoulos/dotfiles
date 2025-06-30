@@ -27,6 +27,7 @@ zinit wait lucid depth"1" nocd for \
 	has"zoxide" atload"_evalcache zoxide init zsh" zdharma-continuum/null \
 	has"pnpm" atclone"./zplug.zsh" atpull"%atclone" g-plane/pnpm-shell-completion \
 	Aloxaf/fzf-tab \
+	hlissner/zsh-autopair \
 	atinit"zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting \
 	atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
 	blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
