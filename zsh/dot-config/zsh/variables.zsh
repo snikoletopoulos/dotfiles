@@ -31,9 +31,5 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 
-# TODO: pnpm
-export PNPM_HOME="/Users/snikoletopoulos/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 # rvm
 export PATH="$PATH:$HOME/.rvm/bin"
