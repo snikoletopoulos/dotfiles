@@ -13,7 +13,8 @@ zinit depth"1" nocd light-mode for \
 zinit wait lucid as"completion" depth"1" for \
 	has"docker" OMZP::docker/completions/_docker \
 	has"pod" OMZP::pod/_pod \
-	has"rustc" OMZP::rust/_rustc
+	has"rustc" OMZP::rust/_rustc \
+	if"[ -s \"$HOME/.bun/_bun\" ]" is-snippet  "$HOME/.bun/_bun"
 
 # TODO
 # zinit depth"1" nocd  for \
