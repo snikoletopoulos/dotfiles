@@ -1,5 +1,6 @@
 export EDITOR='nvim'
 export MANPAGER="nvim +Man!"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Android Studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
