@@ -124,7 +124,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+alt-a = 'workspace A'
 alt-b = 'workspace B'
 # alt-c = 'workspace C' # disable for harpoon
 alt-d = 'workspace D'
@@ -193,11 +193,13 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [ 'layout floating tiling', 'mode main' ] # Toggle between floating and tiling layout
-# backspace = ['close-all-windows-but-current', 'mode main']
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-#s = ['layout sticky tiling', 'mode main']
+# s = ['layout sticky tiling', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
