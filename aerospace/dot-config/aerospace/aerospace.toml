@@ -205,6 +205,12 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 # Workspace assignments
+[workspace-to-monitor-force-assignment]
+A = 'monitor.main'
+T = 'monitor.main'
+S = 'monitor.secondary'
+B = 'monitor.secondary'
+
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace T'
