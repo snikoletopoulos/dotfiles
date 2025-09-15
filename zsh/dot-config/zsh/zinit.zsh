@@ -16,11 +16,6 @@ zinit wait lucid as"completion" depth"1" for \
 	has"rustc" OMZP::rust/_rustc \
 	if"[ -s \"$HOME/.bun/_bun\" ]" is-snippet "$HOME/.bun/_bun"
 
-# TODO
-# zinit depth"1" nocd  for \
-# 	has"delta" atload'eval "$(delta --generate-completion zsh)"' zdharma-continuum/null \
-# 	has"spotify_player" atload'eval "$(spotify_player generate zsh)"' zdharma-continuum/null
-
 zinit wait lucid depth"1" nocd for \
 	has"fnm" atload"_evalcache fnm env --use-on-cd" zdharma-continuum/null \
 	has'fzf' atload'_evalcache fzf --zsh' zdharma-continuum/null \
@@ -32,6 +27,10 @@ zinit wait lucid depth"1" nocd for \
 	atinit"zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting \
 	atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
 	blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
+
+zinit wait lucid depth"1" nocd for \
+	has"delta" atload"_evalcache delta --generate-completion zsh" zdharma-continuum/null \
+	has"spotify_player" atload"_evalcache spotify_player generate zsh" zdharma-continuum/null
 
 # Autostart tmux
 zinit wait lucid depth"1" nocd \
