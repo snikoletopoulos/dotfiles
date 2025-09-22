@@ -215,10 +215,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Workspace assignments
 [workspace-to-monitor-force-assignment]
-A = 'monitor.main'
-T = 'monitor.main'
-S = 'monitor.secondary'
-B = 'monitor.secondary'
+A = 'main'
+T = 'main'
+S = 'secondary'
+B = 'secondary'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
