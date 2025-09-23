@@ -7,6 +7,7 @@ gui:
   scrollPastBottom: true
   authorColors:
     "Stavros Nikoletopoulos": "#f47b20"
+    "*": "#b4befe"
   scrollHeight: 4
   showListFooter: false
   showCommandLog: false
