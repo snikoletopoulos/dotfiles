@@ -17,7 +17,7 @@ gui:
   mouseEvents: true
   theme:
     activeBorderColor:
-      - "#89b4fa"
+      - "#cba6f7"
       - bold
     inactiveBorderColor:
       - "#a6adc8"
@@ -28,7 +28,7 @@ gui:
     cherryPickedCommitBgColor:
       - "#45475a"
     cherryPickedCommitFgColor:
-      - "#89b4fa"
+      - "#cba6f7"
     unstagedChangesColor:
       - "#f38ba8"
     defaultFgColor:
