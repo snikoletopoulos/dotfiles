@@ -1,11 +1,11 @@
 [General]
-  Backend = "gist"
-  Cmd = ["sh", "-c"]
-  Color = true
-  Column = 40
-  Editor = "nvim"
-  Format = "[$description]: $command $tags"
-  SelectCmd = "fzf --ansi --layout=reverse --border --height=90% --pointer=* --cycle --prompt=Snippets:"
-  SnippetDirs = ["~/.config/pet/snippets/"]
-  SnippetFile = "~/.config/pet/snippet.toml"
-  SortBy = ""
+Backend = "gist"
+Cmd = ["sh", "-c"]
+Color = true
+Column = 40
+Editor = "nvim"
+Format = "[$description]: $command $tags"
+SelectCmd = "fzf --ansi --layout=reverse --border --height=90% --pointer=* --cycle --prompt=Snippets:"
+SnippetDirs = ["~/.config/pet/snippets/"]
+SnippetFile = "~/.config/pet/snippet.toml"
+SortBy = ""

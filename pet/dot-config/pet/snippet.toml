@@ -1,4 +1,6 @@
 
 [[Snippets]]
-  Description = "Start a serveo session"
-  command = "ssh -R <name=stavros>.serveo.net:80:localhost:<port=3000> serveo.net"
+Description = "Start a serveo session"
+Output = ""
+Tag = ["server"]
+command = "ssh -R <name=stavros>.serveo.net:80:localhost:<port=3000> serveo.net"
