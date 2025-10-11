@@ -216,8 +216,8 @@ alt-shift-l = ['join-with right', 'mode main']
 [workspace-to-monitor-force-assignment]
 A = 'main'
 T = 'main'
-S = 'secondary'
-B = 'secondary'
+S = ['built-in', 'secondary']
+B = ['built-in', 'secondary']
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
