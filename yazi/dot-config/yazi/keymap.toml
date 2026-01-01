@@ -47,3 +47,13 @@ desc = "Move in relative steps"
 on   = [ "L" ]
 run  = "plugin lazygit"
 desc = "run lazygit"
+
+# Go  to the root of the current Git repository
+[[mgr.prepend_keymap]]
+on = [ "g", "r" ]
+run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
+
+# Preview files with the system Quick Look
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = "shell -- qlmanage -p %s"
