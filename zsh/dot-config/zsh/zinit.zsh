@@ -30,6 +30,7 @@ zinit wait lucid depth"1" nocd for \
 
 zinit wait lucid depth"1" nocd for \
 	has"delta" atload"_evalcache delta --generate-completion zsh" zdharma-continuum/null \
+	has"op" atload"_evalcache op completion zsh" zdharma-continuum/null \
 	has"spotify_player" atload"_evalcache spotify_player generate zsh" zdharma-continuum/null
 
 # Autostart tmux
