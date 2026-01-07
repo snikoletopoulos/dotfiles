@@ -13,24 +13,24 @@ else
 fi
 brew update
 
-# Install Homebrew packages
 log "Installing Homebrew packages"
 brew bundle
 
-# Setup dotfiles
 log "Setting up dotfiles"
 stow */
 
-# Reload zsh
 log "Reloading zsh"
 source ~/.zshrc
 
 log "Install tmux plugins"
 ~/.config/tmux/plugins/tpm/bin/install_plugins
 
-# Setup yazi
 log "Setting up yazi"
 ya pkg install
 if [ ! -d "$HOME/.config/yazi/plugins/yatline-catppuccin.yazi" ]; then
 	git clone https://github.com/imsi32/yatline-catppuccin.yazi.git "$HOME/.config/yazi/plugins/yatline-catppuccin.yazi"
 fi
+
+log "Installation completed"
+log "Run \"op inject -i zsh/dot-config/zsh/env.template.zsh -o zsh/dot-config/zsh/env.zsh\""
+log "to set up environment variables"
