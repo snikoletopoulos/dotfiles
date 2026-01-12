@@ -8,7 +8,7 @@ function Status:name()
 end
 
 require("relative-motions"):setup({
-	show_numbers = "relative",
+	show_numbers = "relative_absolute",
 	only_motions = true,
 })
 
