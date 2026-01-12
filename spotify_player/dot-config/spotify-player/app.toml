@@ -1,5 +1,5 @@
 theme = "Catppuccin-mocha"
-client_id_command = { command = "echo", args = ["$SPOTIFY_CLIENT_ID"] }
+client_id_command = { command = "printenv", args = ["SPOTIFY_CLIENT_ID"] }
 client_port = 8080
 login_redirect_uri = "http://127.0.0.1:8989/login"
 playback_format = """
