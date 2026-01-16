@@ -1,0 +1,84 @@
+set -g status-position top
+set -g status-justify "absolute-centre"
+
+set -g status-style "bg=default,fg=#{@thm_fg}"
+
+%hidden COLOR_PRIMARY="#{@thm_peach}"
+%hidden COLOR_MUTED="#{@thm_overlay_0}"
+set -g @status-separator "#[bg=default,fg=${COLOR_MUTED},none]│"
+
+set -g message-style "fg=${COLOR_PRIMARY}"
+
+# Status Left
+set -g status-left-length 100
+set -g status-left ""
+set -ga status-left "\
+#{?client_prefix,#[fg=#{@thm_red}], }\
+#{?client_prefix,#[bg=#{@thm_red}#,fg=#{@thm_bg}#,bold],#[fg=#{@thm_mauve}]} #S\
+#{?client_prefix,#[bg=default#,fg=#{@thm_red}], }"
+set -ga status-left "#{E:@status-separator} "
+set -ga status-left "#[bg=default,fg=#{@thm_blue}] #{=/-15/~:#{s|.*/||:#{d:pane_current_path}}/#{b:pane_current_path}}"
+set -ga status-left " #{E:@status-separator} "
+set -ga status-left "#[bg=default,fg=#{@thm_green}] #(git branch)"
+set -ga status-left "\
+#{?#{&&:#{!=:#{pane_current_command},zsh},#{!=:#{pane_current_command},bash}}, #{E:@status-separator} }"
+set -ga status-left "\
+#{?#{&&:#{!=:#{pane_current_command},zsh},#{!=:#{pane_current_command},bash}},\
+#[bg=default#,fg=#{@thm_maroon}] #{pane_current_command}}"
+set -ga status-left "#{?window_zoomed_flag, #{E:@status-separator} }"
+set -ga status-left "#[bg=default,fg=#{@thm_yellow}]#{?window_zoomed_flag,}"
+
+# Windows
+set -g window-status-format " #I#{?#{!=:#{window_name},},: ,}#{window_name}#{?#{window_marked_flag}, 󰈽}"
+set -g window-status-current-format "\
+#[bg=default,fg=${COLOR_PRIMARY},bold]\
+#[reverse]#I#{?#{!=:#{window_name},},: ,}\
+#{window_name}\
+#{?#{window_marked_flag}, 󰈽}\
+#[noreverse]"
+set -gF window-status-separator " #{E:@status-separator} "
+
+set -g window-status-style "bg=default,fg=#{@thm_flamingo}"
+set -g window-status-last-style "fg=${COLOR_PRIMARY}"
+set -g window-status-activity-style "bg=#{@thm_red},fg=#{@thm_bg}"
+set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
+
+
+# Status Right
+set -g status-right-length 100
+set -g status-right ""
+# set -ga status-right "#{?#{==:#{online_status},ok},#[fg=#{@thm_mauve}]#{online_status},test#[fg=#{@thm_red}]#{online_status}}" #TODO: 
+# set -ga status-right " #{E:@status-separator}"
+# set -ga status-right "start#[fg=#{@thm_red}]#{online_status}end"
+# set -ga status-right " #{E:@status-separator}"
+set -ga status-right "\
+#{?#{!=:#{cpu_icon},off},#{cpu_bg_color}#{cpu_fg_color} #{cpu_icon} #{cpu_percentage} }"
+set -ga status-right "#{?#{!=:#{cpu_icon},off},#{E:@status-separator} }"
+set -ga status-right "\
+#{?#{!=:#{battery_icon},off},\
+#{battery_color_fg}#[bg=default] #{battery_icon} #{battery_percentage} #{battery_remain}\
+}"
+
+set -ga status-right " #{E:@status-separator} "
+set -ga status-right "#[bg=default,fg=#{@thm_blue}]#{weather}"
+set -ga status-right " #{E:@status-separator} "
+set -ga status-right "#[bg=default,fg=#{@thm_mauve}]󰭦 %e %b 󰅐 %I:%M %p"
+
+# ================================================================================
+
+set -g automatic-rename "on"
+set -g automatic-rename-format "#{window_icon} #{b:pane_current_path}"
+
+set -g visual-bell both
+set -g monitor-bell on
+
+set -g set-titles on
+set -g set-titles-string "#S"
+set -g message-command-style "bg=#{@thm_red},fg=white" # TODO: test this
+
+
+# TODO;
+# battary
+# online
+# bell
+# title + icon
