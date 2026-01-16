@@ -12,6 +12,40 @@ require("relative-motions"):setup({
 	only_motions = true,
 })
 
+function Current.redraw(self)
+	local files = self._folder.window
+	if #files == 0 then return self:empty() end
+
+	local hovered_index
+	for i, f in ipairs(files) do
+		if f.is_hovered then
+			hovered_index = i
+			break
+		end
+	end
+
+	local entities, linemodes = {}, {}
+	for i, f in ipairs(files) do
+		linemodes[#linemodes + 1] = Linemode:new(f):redraw()
+
+		local entity = Entity:new(f)
+		entities[#entities + 1] = ui.Line({
+			Entity
+				:number(i, #self._folder.files, f, hovered_index)
+				-- Change the style of the relative numbers column
+				:style(
+					entity:style():bg("reset"):fg("blue"):dim()
+				),
+			entity:redraw(),
+		}):style(entity:style())
+	end
+
+	return {
+		ui.List(entities):area(self._area),
+		ui.Text(linemodes):area(self._area):align(ui.Align.RIGHT),
+	}
+end
+
 require("git"):setup()
 
 require("yatline"):setup({
