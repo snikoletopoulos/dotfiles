@@ -63,22 +63,3 @@ set -ga status-right " #{E:@status-separator} "
 set -ga status-right "#[bg=default,fg=#{@thm_blue}]#{weather}"
 set -ga status-right " #{E:@status-separator} "
 set -ga status-right "#[bg=default,fg=#{@thm_mauve}]󰭦 %e %b 󰅐 %I:%M %p"
-
-# ================================================================================
-
-set -g automatic-rename "on"
-set -g automatic-rename-format "#{window_icon} #{b:pane_current_path}"
-
-set -g visual-bell both
-set -g monitor-bell on
-
-set -g set-titles on
-set -g set-titles-string "#S"
-set -g message-command-style "bg=#{@thm_red},fg=white" # TODO: test this
-
-
-# TODO;
-# battary
-# online
-# bell
-# title + icon
