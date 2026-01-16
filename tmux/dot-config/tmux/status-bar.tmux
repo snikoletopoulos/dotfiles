@@ -21,12 +21,11 @@ set -ga status-left "#[bg=default,fg=#{@thm_blue}] #{=/-15/~:#{s|.*/||:#{d:pa
 set -ga status-left " #{E:@status-separator} "
 set -ga status-left "#[bg=default,fg=#{@thm_green}] #(git branch)"
 set -ga status-left "\
-#{?#{&&:#{!=:#{pane_current_command},zsh},#{!=:#{pane_current_command},bash}}, #{E:@status-separator} }"
-set -ga status-left "\
 #{?#{&&:#{!=:#{pane_current_command},zsh},#{!=:#{pane_current_command},bash}},\
-#[bg=default#,fg=#{@thm_maroon}] #{pane_current_command}}"
-set -ga status-left "#{?window_zoomed_flag, #{E:@status-separator} }"
-set -ga status-left "#[bg=default,fg=#{@thm_yellow}]#{?window_zoomed_flag,}"
+ #{E:@status-separator} \
+#[bg=default#,fg=#{@thm_maroon}] #{pane_current_command}\
+}"
+set -ga status-left "#{?window_zoomed_flag, #{E:@status-separator} #[bg=default#,fg=#{@thm_yellow}]}"
 
 # Windows
 set -g window-status-format " #I#{?#{!=:#{window_name},},: ,}#{window_name}#{?#{window_marked_flag}, 󰈽}"
