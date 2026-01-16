@@ -94,3 +94,5 @@ set -g @offline_icon "offline"
 set -g @plugin "wfxr/tmux-fzf-url"
 set -g @plugin "nhdaly/tmux-better-mouse-mode"
 set -g @plugin "christoomey/vim-tmux-navigator"
+
+run "#{HOME}/.config/tmux/plugins/tpm/tpm"
