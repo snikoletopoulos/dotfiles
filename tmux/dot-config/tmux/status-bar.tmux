@@ -47,10 +47,7 @@ set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
 # Status Right
 set -g status-right-length 100
 set -g status-right ""
-# set -ga status-right "#{?#{==:#{online_status},ok},#[fg=#{@thm_mauve}]#{online_status},test#[fg=#{@thm_red}]#{online_status}}" #TODO: 
-# set -ga status-right " #{E:@status-separator}"
-# set -ga status-right "start#[fg=#{@thm_red}]#{online_status}end"
-# set -ga status-right " #{E:@status-separator}"
+set -ga status-right "#{?#{==:#{online_status},offline},#[fg=#{@thm_red}]󰤮} #{E:@status-separator}" # NOTE: `online_status` is readable once
 set -ga status-right "\
 #{?#{!=:#{cpu_icon},off},#{cpu_bg_color}#{cpu_fg_color} #{cpu_icon} #{cpu_percentage} }"
 set -ga status-right "#{?#{!=:#{cpu_icon},off},#{E:@status-separator} }"

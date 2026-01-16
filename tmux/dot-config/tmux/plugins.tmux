@@ -89,8 +89,7 @@ set -g @tmux-weather-format "%c++%t+(%f)"
 
 # Online status
 set -g @plugin "tmux-plugins/tmux-online-status"
-set -g @online_icon "󰖩"
-set -g @offline_icon "󰤮"
+set -g @offline_icon "offline"
 
 set -g @plugin "wfxr/tmux-fzf-url"
 set -g @plugin "nhdaly/tmux-better-mouse-mode"
