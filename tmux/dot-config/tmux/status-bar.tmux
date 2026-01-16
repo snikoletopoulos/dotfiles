@@ -46,16 +46,17 @@ set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
 # Status Right
 set -g status-right-length 100
 set -g status-right ""
-set -ga status-right "#{?#{==:#{online_status},offline},#[fg=#{@thm_red}]󰤮} #{E:@status-separator}" # NOTE: `online_status` is readable once
 set -ga status-right "\
-#{?#{!=:#{cpu_icon},off},#{cpu_bg_color}#{cpu_fg_color} #{cpu_icon} #{cpu_percentage} }"
-set -ga status-right "#{?#{!=:#{cpu_icon},off},#{E:@status-separator} }"
+#{?#{==:#{online_status},offline},\
+#[fg=#{@thm_red}]󰤮\
+} #{E:@status-separator}" # NOTE: `online_status` is readable once
 set -ga status-right "\
 #{?#{!=:#{battery_icon},off},\
 #{battery_color_fg}#[bg=default] #{battery_icon} #{battery_percentage} #{battery_remain}\
+#{?#{!=:#{cpu_icon},off},\
+#{cpu_bg_color}#{cpu_fg_color} #{cpu_icon} #{cpu_percentage} \
+#{E:@status-separator} \
 }"
-
 set -ga status-right " #{E:@status-separator} "
-set -ga status-right "#[bg=default,fg=#{@thm_blue}]#{weather}"
-set -ga status-right " #{E:@status-separator} "
+set -ga status-right "#{?#{!!:#{weather}},#[bg=default#,fg=#{@thm_blue}]#{weather} #{E:@status-separator} }"
 set -ga status-right "#[bg=default,fg=#{@thm_mauve}]󰭦 %e %b 󰅐 %I:%M %p"
