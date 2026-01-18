@@ -8,6 +8,9 @@ if 'test ! -d "${TMUX_PLUGIN_PATH}/tpm"' {
 # List of plugins
 set -g @plugin "tmux-plugins/tpm"
 set -g @plugin "tmux-plugins/tmux-sensible"
+set -g @plugin "wfxr/tmux-fzf-url"
+set -g @plugin "nhdaly/tmux-better-mouse-mode"
+set -g @plugin "christoomey/vim-tmux-navigator"
 
 # Resurrect
 set -g @plugin "tmux-plugins/tmux-resurrect"
@@ -67,20 +70,28 @@ set -g @batt_icon_status_discharging '󰂃'
 set -g @batt_icon_status_attached '󰂄'
 set -g @batt_icon_status_unknown '󰂄'
 
-set -g @batt_color_charge_primary_tier8 "#{E:#{@thm_green}}"
-set -g @batt_color_charge_primary_tier7 "#{E:#{@thm_green}}"
-set -g @batt_color_charge_primary_tier6 "#{E:#{@thm_green}}"
-set -g @batt_color_charge_primary_tier5 "#{E:#{@thm_green}}"
-set -g @batt_color_charge_primary_tier4 "#{E:#{@thm_green}}"
-set -g @batt_color_charge_primary_tier3 "#{E:#{@thm_pink}}"
-set -g @batt_color_charge_primary_tier2 "#{E:#{@thm_yellow}}"
-set -g @batt_color_charge_primary_tier1 "#{E:#{@thm_red}}"
+set -g @batt_color_charge_primary_tier8 "#{@thm_green}"
+set -g @batt_color_charge_primary_tier7 "#{@thm_green}"
+set -g @batt_color_charge_primary_tier6 "#{@thm_green}"
+set -g @batt_color_charge_primary_tier5 "#{@thm_green}"
+set -g @batt_color_charge_primary_tier4 "#{@thm_green}"
+set -g @batt_color_charge_primary_tier3 "#{@thm_pink}"
+set -g @batt_color_charge_primary_tier2 "#{@thm_crust}"
+set -g @batt_color_charge_primary_tier1 "#{@thm_crust}"
+set -g @batt_color_charge_secondary_tier8 "default"
+set -g @batt_color_charge_secondary_tier7 "default"
+set -g @batt_color_charge_secondary_tier6 "default"
+set -g @batt_color_charge_secondary_tier5 "default"
+set -g @batt_color_charge_secondary_tier4 "default"
+set -g @batt_color_charge_secondary_tier3 "default"
+set -g @batt_color_charge_secondary_tier2 "#{@thm_red}"
+set -g @batt_color_charge_secondary_tier1 "#{@thm_red}"
 
-set -g @batt_color_status_primary_charged "#{E:#{@thm_green}}"
-set -g @batt_color_status_primary_charging "#{E:#{@thm_green}}"
-set -g @batt_color_status_primary_discharging "#{E:#{@thm_red}}"
-set -g @batt_color_status_primary_attached "#{E:#{@thm_green}}"
-set -g @batt_color_status_primary_unknown  "#{E:#{@thm_green}}"
+set -g @batt_color_status_primary_charged "#{@thm_green}"
+set -g @batt_color_status_primary_charging "#{@thm_green}"
+set -g @batt_color_status_primary_discharging "#{@thm_red}"
+set -g @batt_color_status_primary_attached "#{@thm_green}"
+set -g @batt_color_status_primary_unknown  "#{@thm_green}"
 set -g @batt_remain_short "true"
 
 # Weather
@@ -90,9 +101,5 @@ set -g @tmux-weather-format "%c++%t+(%f)"
 # Online status
 set -g @plugin "tmux-plugins/tmux-online-status"
 set -g @offline_icon "offline"
-
-set -g @plugin "wfxr/tmux-fzf-url"
-set -g @plugin "nhdaly/tmux-better-mouse-mode"
-set -g @plugin "christoomey/vim-tmux-navigator"
 
 run "#{HOME}/.config/tmux/plugins/tpm/tpm"

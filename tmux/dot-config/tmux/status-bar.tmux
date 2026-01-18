@@ -56,7 +56,7 @@ set -ga status-right "\
 #{E:@status-separator} \
 }"
 set -ga status-right "\
-#{battery_color_fg}#[bg=default] #{battery_icon}#{?#{<:#{battery_percentage},60}, #{battery_percentage}} #{battery_remain}"
+#{battery_color_fg}#{battery_icon}#{?#{<=:#{battery_percentage},60}, #{battery_percentage}} #{battery_remain}"
 set -ga status-right " #{E:@status-separator} "
 set -ga status-right "#{?#{!!:#{weather}},#[bg=default#,fg=#{@thm_blue}]#{weather} #{E:@status-separator} }"
 set -ga status-right "#[bg=default,fg=#{@thm_mauve}]󰭦 %e %b 󰅐 %I:%M %p"
