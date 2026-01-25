@@ -102,7 +102,7 @@ set -g @batt_remain_short "true"
 
 # Weather
 set -g @plugin "xamut/tmux-weather"
-set -g @tmux-weather-format "%c++%t+(%f)"
+set -g @tmux-weather-format "%c+%t+(%f)"
 
 # Online status
 set -g @plugin "tmux-plugins/tmux-online-status"
