@@ -31,11 +31,11 @@ function Current.redraw(self)
 		local entity = Entity:new(f)
 		entities[#entities + 1] = ui.Line({
 			Entity
-				:number(i, #self._folder.files, f, hovered_index)
-				-- Change the style of the relative numbers column
-				:style(
-					entity:style():bg("reset"):fg("blue"):dim()
-				),
+					:number(i, #self._folder.files, f, hovered_index)
+			-- Change the style of the relative numbers column
+					:style(
+						entity:style():bg("reset"):fg("blue"):dim()
+					),
 			entity:redraw(),
 		}):style(entity:style())
 	end
@@ -72,7 +72,7 @@ require("yatline"):setup({
 				{ type = "string", custom = false, name = "hovered_name" },
 			},
 			section_c = {
-				{ type = "string", custom = false, name = "hovered_size" },
+				{ type = "string",   custom = false, name = "hovered_size" },
 				{ type = "coloreds", custom = false, name = "permissions" },
 			},
 		},
