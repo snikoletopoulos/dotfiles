@@ -45,7 +45,6 @@ set -g window-status-last-style "fg=${COLOR_PRIMARY}"
 set -g window-status-activity-style "bg=#{@thm_red},fg=#{@thm_bg}"
 set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
 
-
 # Status Right
 set -g status-right-length 100
 set -g status-right ""
