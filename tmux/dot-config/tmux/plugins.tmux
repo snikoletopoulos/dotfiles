@@ -93,6 +93,11 @@ set -g @batt_color_status_primary_charging "#{@thm_green}"
 set -g @batt_color_status_primary_discharging "#{@thm_red}"
 set -g @batt_color_status_primary_attached "#{@thm_green}"
 set -g @batt_color_status_primary_unknown  "#{@thm_green}"
+set -g @batt_color_status_secondary_charged "default"
+set -g @batt_color_status_secondary_charging "default"
+set -g @batt_color_status_secondary_discharging "default"
+set -g @batt_color_status_secondary_attached "default"
+set -g @batt_color_status_secondary_unknown  "default"
 set -g @batt_remain_short "true"
 
 # Weather
