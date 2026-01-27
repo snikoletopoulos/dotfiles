@@ -1,8 +1,8 @@
 # Bootstrap Tmux Plugin Manager
-if 'test ! -d "${TMUX_PLUGIN_PATH}/tpm"' {
-  run 'mkdir -p "${TMUX_PLUGIN_PATH}"'
-  run 'git clone https://github.com/tmux-plugins/tpm "${TMUX_PLUGIN_PATH}/tpm"'
-  run '${TMUX_PLUGIN_PATH}/tpm/bin/install_plugins'
+if 'test ! -d "#{TMUX_PLUGIN_PATH}/tpm"' {
+  run 'mkdir -p "#{TMUX_PLUGIN_PATH}"'
+  run 'git clone https://github.com/tmux-plugins/tpm "#{TMUX_PLUGIN_PATH}/tpm"'
+  run "#{TMUX_PLUGIN_PATH}/tpm/bin/install_plugins"
 }
 
 # List of plugins
@@ -108,4 +108,4 @@ set -g @tmux-weather-format "%c+%t+(%f)"
 set -g @plugin "tmux-plugins/tmux-online-status"
 set -g @offline_icon "offline"
 
-run "#{HOME}/.config/tmux/plugins/tpm/tpm"
+run "#{TMUX_PLUGIN_PATH}/tpm/tpm"
