@@ -27,6 +27,15 @@ unbind P
 bind -N "pet" P run-shell \
   'tmux popup -E -w 90% -h 90% -T Activity "pet search | xargs -I _ tmux send-keys -l -t #S.#{pane_id} _"'
 
+bind -n MouseDown1Status {
+  if -F "#{==:#{mouse_status_range},session}" {
+    run "#{TMUX_PLUGIN_PATH}/tmux-sessionx/scripts/sessionx.sh"
+  } 
+  if -F "#{==:#{mouse_status_range},window}" {
+      select-window
+  }
+}
+
 # make panes equal on =
 # resize panes
 

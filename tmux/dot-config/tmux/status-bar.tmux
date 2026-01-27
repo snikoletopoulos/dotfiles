@@ -13,9 +13,9 @@ set -g message-style "fg=${COLOR_PRIMARY}"
 set -g status-left-length 100
 set -g status-left ""
 set -ga status-left "\
-#{?client_prefix,#[fg=#{@thm_red}], }\
+#[range=user|session]#{?client_prefix,#[fg=#{@thm_red}], }\
 #{?client_prefix,#[bg=#{@thm_red}#,fg=#{@thm_bg}#,bold],#[fg=#{@thm_mauve}]} #S\
-#{?client_prefix,#[bg=default#,fg=#{@thm_red}], }"
+#{?client_prefix,#[bg=default#,fg=#{@thm_red}], }#[range=left]"
 set -ga status-left "#{E:@status-separator} "
 set -ga status-left "#[bg=default,fg=#{@thm_blue}] #{=/-25/~:#{s|.*/||:#{d:pane_current_path}}/#{b:pane_current_path}}"
 set -ga status-left "\
