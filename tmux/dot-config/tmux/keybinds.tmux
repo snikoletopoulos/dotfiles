@@ -14,8 +14,8 @@ bind -N "Vertical split" v split-window -v -c "#{pane_current_path}"
 bind -N "Horizontal split" h split-window -h -c "#{pane_current_path}"
 
 # popups
-bind -N "Lazygit" g run-shell \
-  'tmux popup -d "#{pane_current_path}" -E -w 90% -h 90% -T Git lazygit'
+set -g @lazygit_popup_cmd 'tmux popup -d "#{pane_current_path}" -E -w 90% -h 90% -T Git lazygit'
+bind -N "Lazygit" g run-shell "#{@lazygit_popup_cmd}"
 bind -N "Spotify" m run-shell \
   'tmux popup -d "#{pane_current_path}" -E -w 90% -h 90% -T Spotify spotify_player'
 # bind -N "File manager" f run-shell \
@@ -34,6 +34,9 @@ bind -n MouseDown1Status {
   if -F "#{==:#{mouse_status_range},window}" {
       select-window
   }
+  if -F "#{==:#{mouse_status_range},git}" {
+    run "#{@lazygit_popup_cmd}"
+  } 
 }
 
 # make panes equal on =

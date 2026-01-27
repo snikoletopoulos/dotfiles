@@ -19,10 +19,10 @@ set -ga status-left "\
 set -ga status-left "#{E:@status-separator} "
 set -ga status-left "#[bg=default,fg=#{@thm_blue}] #{=/-25/~:#{s|.*/||:#{d:pane_current_path}}/#{b:pane_current_path}}"
 set -ga status-left "\
-#{?#{==:#(git rev-parse --is-inside-work-tree 2>/dev/null),true},\
+#[range=user|git]#{?#{==:#(git rev-parse --is-inside-work-tree 2>/dev/null),true},\
  #{E:@status-separator} \
 #[bg=default#,fg=#{@thm_green}] #(cd #{pane_current_path} && git symbolic-ref --short HEAD || echo HEAD)\
-}"
+}#[range=left]"
 set -ga status-left "\
 #{?#{&&:#{!=:#{pane_current_command},zsh},#{!=:#{pane_current_command},bash}},\
  #{E:@status-separator} \
